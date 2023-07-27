@@ -1,12 +1,12 @@
-package com.spring.dao;
+package com.spring.mvc.dao;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.transaction.annotation.Transactional;
-import org.hibernate.SessionFactory;
+import javax.transaction.Transactional;
+import com.mysql.cj.xdevapi.SessionFactory;
 import org.hibernate.Session;
-import com.spring.model.Alien;
+import com.spring.mvc.model.Alien;
 @Component
 public class AlienDao {
 	@Autowired
@@ -14,7 +14,9 @@ public class AlienDao {
 	@Transactional
 	public List<Alien> getAliens(){
 		Session session = sessionFactory.getCurrentSession();
-		List<Alien> aliens = session.createQuery("from Alien").list();
+		List <Alien> aliens = session.createQuery("from Alien",Alien.class).list();
 		return aliens;
 	}
 }
+
+

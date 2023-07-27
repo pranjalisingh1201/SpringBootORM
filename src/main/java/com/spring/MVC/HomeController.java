@@ -1,4 +1,4 @@
-package com.spring.MVC;
+package com.spring.mvc;
 
 import java.util.Arrays;
 import java.util.List;
@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.spring.dao.AlienDao;
-import com.spring.model.Alien;
+import com.spring.mvc.dao.AlienDao;
+import com.spring.mvc.model.Alien;
 
 @Controller
 public class HomeController {
