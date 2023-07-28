@@ -4,8 +4,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import javax.transaction.Transactional;
-import com.mysql.cj.xdevapi.SessionFactory;
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+
 import com.spring.mvc.model.Alien;
 @Component
 public class AlienDao {
